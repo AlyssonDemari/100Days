@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Dya 7</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <div class="frame">
+            <main>
+                <div class="container">
+                    <header>
+                        <div class="nav-bar">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="point-bar"></div>
+                        </div>
+                        <div>
+                            <p> Notifications</p>
+                            <input type="text" name="search" id="search" placeholder="Search...">
+                        </div>
+                        <div class="click-search">
+                            <div class="circle"></div>
+                            <div class="stick"></div>
+                        </div>
+                    </header>
+                    <article>
+                        <div class="line"></div>
+                        <div class="container-coment">
+                            <div class="point-coment"></div>
+                            <span>9:24 AM</span>
+                            <p> <stronger>John Walker</stronger> posted a photo on your wall.</p>
+                        </div>
+                        <div class="container-coment">
+                            <div class="point-coment"></div>
+                            <span>8:19 AM</span>
+                            <p> <stronger>Alice Parker</stronger> commented your last post.</p>
+                        </div>
+                        <div class="container-coment">
+                            <div class="point-coment"></div>
+                            <span>Yesterday</span>
+                            <p> <stronger>Luke Wayne</stronger> added you as friend.</p>
+                        </div>
+                    </article>
+                </div>
+                <aside>
+                    <div id="dashboard">
+                        <ul>
+                            <li><span class="fa fa-dashboard"></span>Dasboard</li>
+                            <li><span class="fa fa-user"></span>Profile</li>
+                            <li><span class="fa fa-bell"></span>Notifications</li>
+                            <li><span class="fa fa-comments"></span>Messagens</li>
+                            <li><span class="fa fa-gear"></span>Settings</li>
+                        </ul>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    <script>
+        const clickBar = document.querySelector('.click-search');
+        const navBar = document.querySelector('.nav-bar');
+        
+
+        clickBar.addEventListener('click', () => {
+            const search = document.querySelector('#search');
+            search.classList.toggle('show');
+        });
+
+
+        navBar.addEventListener('click', () => {
+            const navBar = document.querySelector('#dashboard');
+            const main = document.querySelector('.container');
+            navBar.classList.toggle('dashboard');
+
+            if(navBar.classList.contains('dashboard')){
+                main.style.animation = 'moveRight 1s forwards';
+            }else{
+                main.style.animation = 'moveLeft 1s forwards';
+            }
+        });
+
+    </script>
+</body>
+</html>

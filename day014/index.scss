@@ -1,0 +1,37 @@
+@import "../standard";
+
+$bg-main:#4C4841;
+$bg:#FFCE4E;
+
+main{
+    background-color: $bg-main;
+    @include center();
+}
+
+.container{
+    background-color: $bg;
+    width: 325px;
+    height: 180px;
+    border-radius: 6px;
+    @include center();
+}
+
+@for $i from 1 through  9{
+    .line#{$i}{ 
+    position: absolute;
+    top: 59%;
+    background-color: $bg-main;
+    width: (2 + $i * 2.5) + px;
+    height: 3px;
+    animation: walk (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite
+    }
+}
+
+@keyframes walk {
+    0%{
+        transform: translateX(10px);
+    }
+    100%{   
+        transform: translateX(-150px);
+    }
+}

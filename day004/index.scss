@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700,300');
+
+$primary-color: #E56262;
+$bg-color: aliceblue;
+$shadow: 1px 2px 10px 0 rgba(0,0,0,0.3);
+$font-family: 'Open Sans', Helvetica, sans-serif;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: $primary-color;
+  color: #333;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-circle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+%circle-base {
+  width: 150px;
+  height: 150px;
+  background-color: $bg-color;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-shadow: $shadow;
+  animation-fill-mode: both;
+}
+
+.circle1 {
+  @extend %circle-base;
+  animation: moveCircle 2s cubic-bezier(.10, .50, .10, .50) infinite alternate;
+}
+
+.circle2 {
+  @extend %circle-base;
+  width: 100px;
+  height: 100px;
+  animation: moveCircle2 2s cubic-bezier(.10, .50, .10, .50) infinite alternate;
+}
+
+.circle3 {
+  @extend %circle-base;
+  width: 50px;
+  height: 50px;
+  animation: moveCircle3 2s cubic-bezier(.10, .50, .10, .50) infinite alternate;
+}
+
+@keyframes moveCircle {
+  0%, 10% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes moveCircle2 {
+  0%, 40% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes moveCircle3 {
+  0%, 70% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

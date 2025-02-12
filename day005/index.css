@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #42A7A1;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: 0px;
+  font-size: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container-pai {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.estatistic {
+  width: 280px;
+  height: 220px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #F1BA64;
+}
+
+header h1, h2, p {
+  font-size: 0.8rem;
+  color: white;
+  margin: 0px;
+}
+
+header span {
+  text-align: end;
+  font-weight: 600;
+}
+
+.revenue {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.container-line {
+  width: 90%;
+  position: relative;
+}
+
+.lines {
+  margin: auto;
+}
+
+.info-lines {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20px;
+}
+
+.info-lines span {
+  position: relative;
+  font-size: 9px;
+  color: #333;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+
+.info-lines span:before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+  content: "";
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.info-lines .red:before {
+  background: #FA7373;
+}
+
+.info-lines .blue:before {
+  background: #7BA2FF;
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(51, 51, 51, 0.3294117647);
+  transform-origin: center;
+}
+
+.bar:nth-child(2) {
+  margin: 15px 0px 30px 0px;
+}
+
+.bar:nth-child(3) {
+  margin: 40px 0px;
+}
+
+.bar:nth-child(4) {
+  margin: 30px 0px 6px 0px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  font-size: 0.6rem;
+}
+
+svg {
+  position: absolute;
+  top: -10%;
+  fill: none;
+  stroke: #FA7373;
+  stroke-width: 2;
+}
+
+polyline:nth-child(2) {
+  fill: none;
+  stroke: #7BA2FF;
+  stroke-width: 2;
+}
+
+.points {
+  position: absolute;
+  top: 0px;
+}
+
+.point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #FA7373;
+}
+
+.point-1 {
+  top: 72px;
+  left: 18px;
+}
+
+.point-2 {
+  top: 33px;
+  left: 52px;
+}
+
+.point-3 {
+  top: 48px;
+  left: 93px;
+}
+
+.point-4 {
+  top: 38px;
+  left: 128px;
+}
+
+.point-5 {
+  top: 50px;
+  left: 168px;
+}
+
+.point-6 {
+  top: 57px;
+  left: 198px;
+}
+
+.point-7 {
+  top: 48px;
+  left: 230px;
+}
+
+.tooltip {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 0.6rem;
+  padding: 5px;
+  color: #FFF;
+  background-color: #FA7373;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 8px;
+  border: 5px solid;
+  border-color: #FA7373 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.point:hover .tooltip {
+  visibility: visible;
+  transform: translateY(-15px);
+  opacity: 1;
+}
+
+.point2 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: #7BA2FF;
+}
+
+.point2-1 {
+  top: 102px;
+  left: 18px;
+}
+
+.point2-2 {
+  top: 63px;
+  left: 52px;
+}
+
+.point2-3 {
+  top: 78px;
+  left: 93px;
+}
+
+.point2-4 {
+  top: 92px;
+  left: 128px;
+}
+
+.point2-5 {
+  top: 86px;
+  left: 168px;
+}
+
+.point2-6 {
+  top: 89px;
+  left: 198px;
+}
+
+.point2-7 {
+  top: 69px;
+  left: 230px;
+}
+
+.tooltip2 {
+  position: absolute;
+  top: -20px;
+  left: -7px;
+  font-size: 0.6rem;
+  padding: 5px;
+  color: #FFF;
+  background-color: #7BA2FF;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.tooltip2::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 5px;
+  border: 5px solid;
+  border-color: #7BA2FF rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+.point2:hover .tooltip2 {
+  visibility: visible;
+  transform: translateY(-15px);
+  opacity: 1;
+}/*# sourceMappingURL=index.css.map */

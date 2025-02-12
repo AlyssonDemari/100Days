@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="profile">
+                <img src="https://100dayscss.com/codepen/13-1.jpg" alt="julia Toth">
+                <span>+</span>
+            </div>
+            <div class="profile">
+                <img src="https://100dayscss.com/codepen/13-2.jpg" alt="Lian Tunner">
+                <span>+</span>  
+            </div>
+            <div class="profile">
+                <img src="https://100dayscss.com/codepen/13-3.jpg" alt="Alisson Pierce">
+                <span>+</span>  
+            </div>
+            <div class="profile">
+                <img src="https://100dayscss.com/codepen/13-4.jpg" alt="Della Murphy">
+                <span>+</span>  
+            </div>
+            <div class="overlay">
+                <div class="overlay-top">
+                    <img src="https://100dayscss.com/codepen/13-1-header.jpg" alt="">
+                </div>
+
+                <div class="picture">
+                    <img class="cloudImg" src="https://100dayscss.com/codepen/13-1.jpg" alt="">
+                    <button>X</button>
+                </div>
+                <div class="overlay-down">
+                    <h1>Julia Toth</h1>
+
+                    <div class="contact">
+                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-comment"></i>
+                        <i class="fa fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const button = document.querySelector('button');
+        const plus = document.querySelectorAll('span');
+        const overlay = document.querySelector('.overlay');
+        const profiles = document.querySelectorAll('.profile img');
+        const cloudImg = document.querySelector('.cloudImg');
+        const h1 = document.querySelector('.overlay-down h1');
+
+
+        plus.forEach(click => {
+            click.addEventListener('click', () => {
+                overlay.classList.add('ativo');
+
+                const clickedPlus = event.target.closest('.profile').querySelector('img');
+
+                h1.textContent =  clickedPlus.alt;
+                
+                cloudImg.src = clickedPlus.src;
+                });
+            });
+
+        button.addEventListener('click', () => {
+            overlay.classList.remove('ativo');
+        });
+
+        function handleImageClick(event) {
+            const clickedImage = event.target;
+            console.log('Imagem clicada:', clickedImage.src);
+            cloudImg.src = clickedImage.src;
+        }
+
+        profiles.forEach(img => {
+            img.addEventListener('click', handleImageClick);
+        });
+    </script>
+</body>
+</html>

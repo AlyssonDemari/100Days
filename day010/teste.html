@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p></p>
+  <p class="reviw"></p>
+  <input type="number" name="number" id="number">
+  <input type="button" value="Calcular Soma" id="sumButton">
+  
+  <script>
+    const p = document.querySelector('p')
+    const reviw = document.querySelector('.reviw')
+    const inputNumber = document.querySelector("#number")
+    const sumButton = document.querySelector('#sumButton')
+  
+    sumButton.addEventListener('click', () => {
+      const inputNumber = document.querySelector('#number')
+      let soma = 0
+      for(let cont = 0; cont <= Number(inputNumber.value); cont++){
+
+        if (cont % 2 === 0) { 
+          soma += cont;
+        }
+      }
+          console.log(soma) 
+    })
+  </script>
+  
+  
+</body>
+</html>

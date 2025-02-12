@@ -1,0 +1,176 @@
+@import "../standard";
+
+$red:#EC6565;
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 6px;
+}
+
+.profile {
+    position: relative;
+    width: 195px;
+
+
+    img {
+        width: 195px;
+        position: relative;
+        z-index: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;            
+        justify-content: center;
+        align-items: center; 
+        transform: translate(-50%, -50%) scale(2);
+        background-color: $red;
+        color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        border-radius: 50%;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    &:hover {
+        img {
+            transition: all ease-out 0.5s;
+            filter: brightness(0.5); 
+        }
+
+        span {
+            opacity: 1; /* Faz o span aparecer */
+            transform: translate(-50%, -50%) scale(1);
+            transition: all ease-out 0.5s;
+            cursor: pointer;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility: hidden;
+    transform: all 1s;
+
+    &.ativo {
+        visibility: visible;
+
+        .overlay-top {
+            transition: top 1s ease; 
+            top: 0px;
+        }
+
+        .picture {
+            transition: top 1s ease; 
+            transition-delay:0.3s ;
+            top: 120px;
+        }
+
+        .overlay-down {
+            transition: top 1s ease; 
+            top: 177px;
+        }
+    }
+
+    .overlay-top {
+        width: 99%;
+        height: 45%;
+        position: absolute;
+        transition-delay: 10s;
+        transition: all 1s ease 0.2s; 
+        top: -182px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .picture{
+        position: absolute;
+        top: -120px;
+        left: 37%;
+        z-index: 3;
+        transition: all 1s ease; 
+
+        button{
+            position: absolute;
+            top: -100%;
+            left: 95%;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background-color: $red;
+            color: white;
+            font-weight: 600;
+
+            &:hover{
+                background-color: white;
+                color: $red;
+                cursor: pointer;
+            }
+        }
+
+        img{
+            width: 50%;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+    }
+
+    .overlay-down{
+        width: 99%;
+        height: 55%;
+        background-color: $red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 1s ease 0.2s; 
+
+        position: absolute;
+
+        top: 398px;
+
+        h1{
+            color: white;
+            font-size:17px ;
+        }
+
+        i{
+            font-size: 20px;
+            padding: 10px;
+            margin: 20px;
+            color: white;
+            border: 1px solid white;
+            border-radius: 50%;
+            transition: all 0.8s;
+
+            &:hover{
+                transition: all 0.8s;
+                background-color: white;
+                color: $red;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: translate(-50%, -50%) scale(2);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+

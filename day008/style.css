@@ -1,0 +1,158 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    background: #000;
+    filter: contrast(25);
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .ball {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background: #da1313;
+    border-radius: 50%;
+    filter: blur(15px);
+  }
+  
+  /* Classes .blubb-1 até .blubb-8 */
+  .blubb-1, .blubb-2, .blubb-3, .blubb-4, .blubb-5, .blubb-6, .blubb-7, .blubb-8 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg); /* A rotação pode ser ajustada */
+  }
+  
+  .blubb-1:after, .blubb-2:after, .blubb-3:after, .blubb-4:after, .blubb-5:after, .blubb-6:after, .blubb-7:after, .blubb-8:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    transform-origin: 40px 40px;
+    animation: rotate-1 2.5s ease-in-out infinite;
+    filter: blur(5px);
+  }
+  
+  .blubb-2:after {
+    animation-duration: 3s;
+  }
+  
+  .blubb-3:after {
+    animation-duration: 3.5s;
+  }
+  
+  .blubb-4:after {
+    animation-duration: 4s;
+  }
+  
+  .blubb-5:after {
+    animation-duration: 4.5s;
+  }
+  
+  .blubb-6:after {
+    animation-duration: 5s;
+  }
+  
+  .blubb-7:after {
+    animation-duration: 5.5s;
+  }
+  
+  .blubb-8:after {
+    animation-duration: 6s;
+  }
+  
+  /* Classes .sparkle-1 até .sparkle-10 */
+  .sparkle-1, .sparkle-2, .sparkle-3, .sparkle-4, .sparkle-5, .sparkle-6, .sparkle-7, .sparkle-8, .sparkle-9, .sparkle-10 {
+    position: absolute;
+    top: 38px;
+    left: 38px;
+    width: 7px;
+    height: 7px;
+    transform: rotate(90deg); /* A rotação pode ser ajustada */
+  }
+  
+  .sparkle-1:after, .sparkle-2:after, .sparkle-3:after, .sparkle-4:after, .sparkle-5:after, .sparkle-6:after, .sparkle-7:after, .sparkle-8:after, .sparkle-9:after, .sparkle-10:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    transform-origin: 60px 60px;
+    animation: rotate-2 3.5s ease-in-out infinite;
+    filter: blur(3px);
+  }
+  
+  .sparkle-2:after {
+    animation-duration: 4s;
+  }
+  
+  .sparkle-3:after {
+    animation-duration: 4.5s;
+  }
+  
+  .sparkle-4:after {
+    animation-duration: 5s;
+  }
+  
+  .sparkle-5:after {
+    animation-duration: 5.5s;
+  }
+  
+  .sparkle-6:after {
+    animation-duration: 6s;
+  }
+  
+  .sparkle-7:after {
+    animation-duration: 6.5s;
+  }
+  
+  .sparkle-8:after {
+    animation-duration: 7s;
+  }
+  
+  .sparkle-9:after {
+    animation-duration: 7.5s;
+  }
+  
+  .sparkle-10:after {
+    animation-duration: 8s;
+  }
+  
+  @keyframes rotate-1 {
+    from {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    to {
+      transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes rotate-2 {
+    from {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    to {
+      transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+  }
+  

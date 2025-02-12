@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font1:"Roboto Flex", serif;
+    --font2: 'Courier New', 'Courier', sans-serif;
+    --font3: "Original Surfer", serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 98vh;
+    font-family: var(--font1)
+}
+
+main{
+    max-width: 400px;
+}
+
+header h1{
+    font-family: var(--font2);
+    width: 100%;
+    font-size: 1.8rem;
+    background: -webkit-linear-gradient(45deg, #43389F, #4ec6ca);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container{ 
+    display: flex;
+    align-items: center;
+    background: url(embreve.png) no-repeat center;
+    width: 400px; 
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+}
+iframe{
+    width: 400px; 
+    height: 400px;
+}
+
+.buttons{
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+button i{
+    font-size: 25px;
+    padding: 5px;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+button i:hover{
+    font-size: 25px;
+    background-color: #4F46E5;
+    color: #FFF;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+
+
+.days{
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.days strong{
+    color: #4F46E5;
+    font-family: var(--font3);
+}
+
+.name strong{
+    color: #4F46E5;
+}
+
+.descrition{
+    height: 90px;
+}

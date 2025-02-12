@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,300italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+}
+
+.profile {
+  position: relative;
+  width: 195px;
+}
+.profile img {
+  width: 195px;
+  position: relative;
+  z-index: 0;
+}
+.profile span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%) scale(2);
+  background-color: #EC6565;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+}
+.profile:hover img {
+  transition: all ease-out 0.5s;
+  filter: brightness(0.5);
+}
+.profile:hover span {
+  opacity: 1; /* Faz o span aparecer */
+  transform: translate(-50%, -50%) scale(1);
+  transition: all ease-out 0.5s;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  visibility: hidden;
+  transform: all 1s;
+}
+.overlay.ativo {
+  visibility: visible;
+}
+.overlay.ativo .overlay-top {
+  transition: top 1s ease;
+  top: 0px;
+}
+.overlay.ativo .picture {
+  transition: top 1s ease;
+  transition-delay: 0.3s;
+  top: 120px;
+}
+.overlay.ativo .overlay-down {
+  transition: top 1s ease;
+  top: 177px;
+}
+.overlay .overlay-top {
+  width: 99%;
+  height: 45%;
+  position: absolute;
+  transition-delay: 10s;
+  transition: all 1s ease 0.2s;
+  top: -182px;
+}
+.overlay .overlay-top img {
+  width: 100%;
+}
+.overlay .picture {
+  position: absolute;
+  top: -120px;
+  left: 37%;
+  z-index: 3;
+  transition: all 1s ease;
+}
+.overlay .picture button {
+  position: absolute;
+  top: -100%;
+  left: 95%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #EC6565;
+  color: white;
+  font-weight: 600;
+}
+.overlay .picture button:hover {
+  background-color: white;
+  color: #EC6565;
+  cursor: pointer;
+}
+.overlay .picture img {
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.overlay .overlay-down {
+  width: 99%;
+  height: 55%;
+  background-color: #EC6565;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 1s ease 0.2s;
+  position: absolute;
+  top: 398px;
+}
+.overlay .overlay-down h1 {
+  color: white;
+  font-size: 17px;
+}
+.overlay .overlay-down i {
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: all 0.8s;
+}
+.overlay .overlay-down i:hover {
+  transition: all 0.8s;
+  background-color: white;
+  color: #EC6565;
+  cursor: pointer;
+}
+
+@keyframes scale {
+  0% {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}/*# sourceMappingURL=index.css.map */

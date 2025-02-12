@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Courier New", "Courier", sans-serif;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #FFF;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(45deg, #43389F, #4ec6ca);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 60px;
+}
+
+.number {
+  display: flex;
+  position: relative;
+}
+
+.one-one {
+  width: 22px;
+  height: 40px;
+  background-color: #FFF;
+  border-radius: 3px;
+  transform: rotate(50deg);
+  position: absolute;
+  left: -15px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.two-one {
+  width: 24px;
+  height: 100px;
+  background-color: #FFF;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.one-zero {
+  position: relative;
+  left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.one-zero,
+.two-zero {
+  width: 100px;
+  height: 100px;
+  border: 24px solid #FFF;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.days p {
+  color: #FFF;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.text p {
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 10px;
+}/*# sourceMappingURL=index.css.map */

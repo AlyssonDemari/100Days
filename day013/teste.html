@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste{
+            background-color: aqua;
+            width: 400px;
+            height: 400px;
+        }
+
+        .teste.active{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="teste">
+        <button>oi né</button>
+    </div>
+
+    <script>
+        const button = document.querySelector('button')
+        const teste = document.querySelector('.teste')
+
+        button.addEventListener('click', () =>{
+            teste.classList.add('active')
+        })
+    </script>
+</body>
+</html>

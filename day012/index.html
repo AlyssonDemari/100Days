@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste sass</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <main>
+        <article>
+            <p>
+                I know quite certainly that I myself have no special talent; curiosity, <span class="hover">obsession</span>
+                and dogged endurance, combined with self-criticism have brought me to my ideas.
+            </p>
+            <div class="tooltip">
+                <p class="tooltipText1">[əbˈseʃ(ə)n]<i class="fa fa-volume-up"></i></p>
+                <p class="tooltipText">Obsession, a persistent disturbing preoccupation with an often unreasonable idea or feeling.</p>
+            </div>
+            <div class="quote">
+
+            </div>
+            <blockquote>Albert Einstein</blockquote>
+        </article>
+    </main>
+    <script>
+        const tooltip = document.querySelector('.tooltip')
+        const hover = document.querySelector('.hover')
+
+        
+        hover.addEventListener('mouseover', () => {
+            tooltip.style.transform = 'translateY(138px)'
+            tooltip.style.opacity = '1'
+            
+        });
+
+        hover.addEventListener('mouseout', () => {
+            tooltip.style.transform = 'translateY(0px)'
+            tooltip.style.opacity = '0'
+        });
+
+        tooltip.addEventListener('mouseover', () => {
+            tooltip.style.transform = 'translateY(138px)';
+            tooltip.style.opacity = '1';
+        });
+        tooltip.addEventListener('mouseout', () => {
+            tooltip.style.transform = 'translateY(0px)';
+            tooltip.style.opacity = '0';
+        });
+    </script>
+</body>
+</html>
